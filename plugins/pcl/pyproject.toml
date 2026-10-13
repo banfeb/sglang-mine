@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sglang-pcl"
+version = "0.2.0"
+description = "Priority-cost-LPM scheduler plugin for SGLang"
+requires-python = ">=3.10"
+
+[project.entry-points."sglang.srt.plugins"]
+pcl = "sglang_pcl:plugin_entry"
+
+[tool.setuptools.packages.find]
+include = ["sglang_pcl*"]
